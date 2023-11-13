@@ -672,6 +672,7 @@ input[type="submit"] {
   font-family: var(--mainFont);
   font-weight: 600;
   block-size: 60px;
+  box-sizing: border-box;
 }
 
 textarea {
