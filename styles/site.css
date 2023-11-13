@@ -664,6 +664,7 @@ input {
   width: 100%;
   margin-block: 10px;
   block-size: 30px;
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
