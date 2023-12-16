@@ -731,4 +731,79 @@ footer p {
 /* Next Breakpoint */
 @media all and (min-width: 768px){
 
+  section {
+    width: 100%;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .sectionMargin {
+    margin-inline-start: 0;
+  }
+
+  body {
+    padding-inline: 60px;
+  }
+
+  #hero {
+    padding-inline: 0;
+  }
+
+  .graphicContainer {
+    display: block;
+    inline-size: 49%;
+    min-inline-size: 150px;
+  }
+
+  .twoColumnLayout {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-grow: 100%;
+  }
+
+  .twoColumnLayout>div {
+    margin: auto;
+    min-inline-size: 49%;
+  }
+
+  #hero img {
+    inline-size: 100%;
+  }
+
+  .buttonContainer { 
+    flex-direction: row;
+    align-items: stretch;
+    justify-items: start;
+    gap: 30px;
+  }
+
+  #hero a {
+    inline-size: 150px;
+    margin-block: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imageContainer {
+    width: auto;
+  }
+
+  .imageContainer img {
+    width: auto;
+  }
+
+  .contentGrid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  span a {
+    text-decoration: underline;
+  }
+
 }
