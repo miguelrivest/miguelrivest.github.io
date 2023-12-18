@@ -639,9 +639,9 @@ header {
 }
 
 .imageContainer {
-  max-block-size: 38vh;
   inline-size: 100%;
   overflow: hidden;
+  max-block-size: 38vb;
 }
 
 .margin-bottom-small {
@@ -666,6 +666,13 @@ form {
 }
 
 input {
+  width: 100%;
+  margin-block: 10px;
+  block-size: 30px;
+  box-sizing: border-box;
+}
+
+select {
   width: 100%;
   margin-block: 10px;
   block-size: 30px;
@@ -739,6 +746,67 @@ footer ul {
   padding: 0;
 }
 
+#radioset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  grid-area: radio;
+  margin-inline: 0;
+  margin-block: 10px;
+}
+
+input[type="radio"] {
+  block-size: 15px;
+  margin-inline-end: 5px;
+}
+
+#radioset div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"] {
+  block-size: 15px;
+  margin-inline-end: 5px;
+}
+
+#select div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+select {
+  text-align: center;
+}
+
+input[type="submit"] {
+  color: var(--primaryColour);
+}
+
+form {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin-block-end: 60px;
+}
+
+#teamsection .contentGrid {
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Next Breakpoint */
 @media all and (min-width: 768px){
@@ -802,12 +870,11 @@ footer ul {
   }
 
   .imageContainer {
-    width: auto;
+    height: 100%;
+    width: 100%;
   }
 
-  .imageContainer img {
-    width: auto;
-  }
+
 
   .contentGrid {
     display: grid !important;
@@ -815,7 +882,8 @@ footer ul {
     grid-template-areas: 
       "first second"
       "third fourth";
-    gap: 60px
+    gap: 60px;
+    justify-content: start;
   }
 
   span a {
@@ -849,12 +917,16 @@ footer ul {
   .footerColumnContainer {
     display: flex;
     flex-direction: row;
+    gap: 30px;
   }
 
   footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    inline-size: 100%;
+    margin-inline: 0;
+    gap: 60px;
   }
 
   #attributions {
@@ -863,6 +935,116 @@ footer ul {
 
   #attributions div {
     margin-block-end: 10px;
+  }
+
+  .sectionMargin {
+    margin: auto;
+    inline-size: 100%;
+    box-sizing: border-box;
+  }
+
+  img {
+    inline-size: auto;
+    max-block-size: 600px;
+  }
+
+  #aboutsection .imageContainer {
+    display: grid;
+    justify-content: center;
+  }
+
+  #hours td {
+    text-align: right;
+    inline-size: 50%;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    grid-template-areas: 
+    "fname lname"
+    "fnameinput lnameinput"
+    "email how"
+    "emailinput howinput"
+    "radio radio"
+    "check check"
+    "comment comment"
+    "commentarea commentarea"
+    "submit submit";
+  }
+
+  label[for="fname"] {
+    grid-area: fname;
+  }
+
+  label[for="lname"] {
+    grid-area: lname;
+  }
+
+  label[for="email"] {
+    grid-area: email;
+  }
+
+  label[for="comment"] {
+    grid-area: comment;
+  }
+
+  label[for="how"] {
+    grid-area: how;
+  }
+
+  input[name="email"] {
+    grid-area: emailinput;
+  }
+
+  input[name="fname"] {
+    grid-area: fnameinput;
+  }
+
+  input[name="lname"] {
+    grid-area: lnameinput;
+  }
+
+  textarea[name="comment"] {
+    grid-area: commentarea;
+  }
+
+  input[type="submit"] {
+    grid-area: submit;
+  }
+
+  select[name="how"] {
+    grid-area: howinput;
+  }
+
+  input[type="radio"] {
+    block-size: 15px;
+    margin-inline-end: 5px;
+  }
+
+  #radioset div {
+    display: flex;
+    align-items: center;
+  }
+
+  #radioset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 15px;
+    grid-area: radio;
+    margin-inline: 0;
+    margin-block: 10px;
+  }
+
+  #select {
+    flex-direction: row;
+    grid-area: check;
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    margin-block-end: 15px;
   }
 
 }

@@ -40,10 +40,35 @@
         <section class="sectionMargin">
             <h1 class="sectionHeading">Need to get in touch?</h1>
             <form action="contact-us.html" method="get">
-                <label for="name">Full Name:</label>
-                <input type="text" name="name" id="name">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname">
                 <label for="email">Email Address:</label>
                 <input type="email" name="email" id="email">
+                <label for="how">Question Topic</label>
+                <select name="how" id="how">
+                    <option value="-1">-- Select Option --</option>
+                    <option value="technical">Technical Issue</option>
+                    <option value="pricing">Pricing</option>
+                    <option value="signup">Signup Process</option>
+                </select>
+                <fieldset id="radioset">
+                    <legend>How did you hear about us?</legend>
+                    <div class="radioContainer"><input type="radio" name="social" id="facebook"><label
+                            for="facebook">Facebook</label></div>
+                    <div class="radioContainer">
+                        <input type="radio" name="social" id="instagram"><label for="instagram">Instagram</label>
+                    </div>
+                    <div class="radioContainer"><input type="radio" name="social" id="youtube"><label
+                            for="youtube">YouTube</label></div>
+                </fieldset>
+                <fieldset id="select">
+                    <legend>What service is this regarding?</legend>
+                    <div><input type="checkbox" name="Tutoring" id="Tutoring"><label for="Tutoring">Tutoring</label></div>
+                    <div><input type="checkbox" name="feedback" id="feedback"><label for="feedback">Feedback</label></div>
+                    <div><input type="checkbox" name="archive" id="archive"><label for="archive">Archive</label></div>
+                </fieldset>
                 <label for="comment">Comment:</label>
                 <textarea name="comment" id="comment"></textarea>
                 <input type="submit" value="Send">
