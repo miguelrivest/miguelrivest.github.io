@@ -886,6 +886,10 @@
       width: 100%;
     }
 
+    .testimonial {
+      inline-size: 100%;
+    }
+
     header {
       width: 100%;
     }
