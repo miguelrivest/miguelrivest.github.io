@@ -407,7 +407,7 @@
   }
 
   .testimonial {
-    inline-size: 70%;
+    inline-size: 100%;
     margin-inline: auto;
     text-align: center;
   }
@@ -887,7 +887,7 @@
     }
 
     .testimonial {
-      inline-size: 100%;
+      inline-size: 70%;
     }
 
     header {
