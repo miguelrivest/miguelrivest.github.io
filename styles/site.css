@@ -406,6 +406,12 @@
     --fontSize: 17px;
   }
 
+  .testimonial {
+    inline-size: 70%;
+    margin-inline: auto;
+    text-align: center;
+  }
+
   .text-center {
     text-align: center;
   }
@@ -429,6 +435,16 @@
     padding: 15px 0;
   }
 
+  .logoContainer {
+    flex-direction: column;
+    justify-content: baseline;
+  }
+
+  .logoContainer p {
+    font-size: 14px;
+    margin-block-start: 5px;
+  }
+
   table {
     inline-size: 100%;
     border-collapse: collapse;
@@ -436,6 +452,14 @@
     margin-block-end: 60px;
     margin-inline: auto;
     max-inline-size: 700px;
+  }
+
+  header>p {
+    inline-size: 100%;
+  }
+
+  video {
+    max-inline-size: 100%;
   }
 
   td,
