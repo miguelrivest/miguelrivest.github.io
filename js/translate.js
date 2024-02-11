@@ -34,7 +34,7 @@ let frenchButton = document.getElementById("french");
 let englishButton = document.getElementById("english");
 
 frenchButton.addEventListener('click', function () {
-    let elements = document.querySelectorAll("h1,p");
+    let elements = document.querySelectorAll("h1,h2,h3,p");
 
     for (let element of elements) {
         let message = element.innerText;
@@ -45,7 +45,7 @@ frenchButton.addEventListener('click', function () {
 })
 
 englishButton.addEventListener('click', function () {
-    let elements = document.querySelectorAll("h1,p");
+    let elements = document.querySelectorAll("h1,h2,h3,p");
 
     for (let element of elements) {
         let message = element.innerText;
