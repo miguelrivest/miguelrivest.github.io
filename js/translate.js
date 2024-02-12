@@ -34,13 +34,15 @@ let frenchButton = document.getElementById("french");
 let englishButton = document.getElementById("english");
 
 frenchButton.addEventListener('click', function () {
-    let elements = document.querySelectorAll("h1,h2,h3,p");
+    let elements = document.querySelectorAll("h1,h2,h3,p,button,a");
 
     for (let element of elements) {
-        let message = element.innerText;
-        translate(message).then(translatedMessage => {
-            element.innerText = translatedMessage;
-        });
+        if (true) {
+            let message = element.innerText;
+            translate(message).then(translatedMessage => {
+                element.innerText = translatedMessage;
+            });
+        }
     }
 })
 
