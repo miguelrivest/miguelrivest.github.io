@@ -37,7 +37,7 @@ frenchButton.addEventListener('click', function () {
     let elements = document.querySelectorAll("h1,h2,h3,p,button,a");
 
     for (let element of elements) {
-        if (true) {
+        if (!element.hasAttribute('noTranslate')) {
             let message = element.innerText;
             translate(message).then(translatedMessage => {
                 element.innerText = translatedMessage;
