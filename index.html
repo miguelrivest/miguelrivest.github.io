@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - AJAX</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <h1>Game Players - Assignment 1</h1>
+    <div id="filter-container" class="filter-container">
+        <h2>Filters:</h2>
+        <ul class="filter-list">
+            <li>Game:</li>
+            <li>
+                <select name="game-select" id="game-select">
+                    <option value="no-game">Select</option>
+                    <option value="uno">Uno</option>
+                    <option value="chess">Chess</option>
+                    <option value="battleship">Battleship</option>
+                    <option value="cribbage">Cribbage</option>
+                    <option value="hearts">Hearts</option>
+                    <option value="crazy8s">Crazy 8s</option>
+                    <option value="checkers">Checkers</option>
+                    <option value="connect4">Connect 4</option>
+                    <option value="war">War</option>
+                    <option value="mancala">Mancala</option>
+                    <option value="backgammon">Backgammon</option>
+                    <option value="dominoes">Dominoes</option>
+                </select>
+            </li>
+            <li id="type-title">Game Type:</li>
+            <li>
+                <select name="game-type" id="game-type">
+                    <option value="no-type">Select</option>
+                    <option value="card">Card</option>
+                    <option value="board">Board</option>
+                    <option value="strategy">Strategy</option>
+                    <option value="other">Other</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div class="buttonContainer">
+        <button id="add-player">Add Player</button>
+        <button id="toggle-colors">Lightmode</button>
+    </div>
+    <div class="hide" id="form-block">
+        <h2>Add Player:</h2>
+        <form id="player-form" action="php/addPlayer.php">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname">
+            <p id="fNameError" class="error hide">First name cannot be blank</p>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname">
+            <p id="lNameError" class="error hide">Last name cannot be blank</p>
+            <label for="uname">Username:</label>
+            <input type="text" name="uname" id="uname">
+            <p id="usernameError" class="error hide">Username cannot be blank</p>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+            <p id="emailError" class="error hide">Email must be in a valid email format. (john@doe.com)</p>
+            <fieldset>
+                <legend>Games Played:</legend>
+                <div id="game-list" class="game-list">
+                    <label>
+                        <input type="checkbox" name="games" value="battleship">Battleship
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="cribbage">Cribbage
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="hearts">Hearts
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="uno">Uno
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="crazy8s">Crazy 8s
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="chess">Chess
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="checkers">Checkers
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="connect4">Connect 4
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="war">War
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="mancala">Mancala
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="backgammon">Backgammon
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="games" value="dominoes">Dominoes
+                        <input type="date">
+                    </label>
+                </div>
+            </fieldset>
+            <p id="gameError" class="error hide">Must choose at least one game</p>
+            <label for="wins">Wins:</label>
+            <input type="text" name="wins" id="wins">
+            <p id="winsError" class="error hide">Wins must be a valid number</p>
+            <label for="losses">Losses:</label>
+            <input type="text" name="losses" id="losses">
+            <p id="lossesError" class="error hide">Losses must be a valid number</p>
+            <label for="enrolled">Enrolled Date:</label>
+            <input type="date" name="enrolled" id="enrolled">
+            <p id="enrolledError" class="error hide">Enrolled date cannot be blank and cannot be in the future</p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="player-display" class="player-display default-div-style">
+        <h2>Players:</h2>
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
