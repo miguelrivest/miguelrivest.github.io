@@ -125,7 +125,7 @@ button {
     display: grid;
     inline-size: 100%;
     max-inline-size: 800px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 30px;
     gap: 15px;
 }
@@ -151,6 +151,12 @@ button {
 
 .hide {
     display: none;
+}
+
+@media all and (min-width: 500px) {
+    .playerDiv {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media all and (min-width: 1200px) {
